@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelX</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+      .bg-decor {
+        background-image: url("images/space.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .opacity-85 {
+        opacity: 0.85;
+      }
+    </style>
+  </head>
+  <body class="d-flex min-vh-100 align-items-center bg-decor">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-6">
+          <div class="rounded shadow p-4 bg-white opacity-85">
+            <!-- Journey To Mars -->
+            <div>
+              <label for="mars" class="pt-3">Journey To Mars 🌏👨‍✈️</label>
+              <input type="number" value="0" class="form-control mt-2" id="mars-tickets"/>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="btn btn-primary mt-2" onclick="handleClick('mars','plus')">+</div>
+                  <div class="btn btn-primary mt-2" onclick="handleClick('mars','minus')">-</div>
+                </div>
+                <div>Cost: $ <span id="mars-total">0</span></div>
+              </div>
+            </div>
+            <!-- Journey To Moon -->
+            <div>
+              <label for="moon" class="pt-3">Journey To Moon 🌒</label>
+              <input type="number" value="0" class="form-control mt-2" id="moon-tickets" />
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="btn btn-primary mt-2" onclick="handleClick('moon','plus')">+</div>
+                  <div class="btn btn-primary mt-2" onclick="handleClick('moon','minus')">-</div>
+                </div>
+                <div>Cost: $ <span id="moon-total">0</span></div>
+              </div>
+            </div>
+            <hr />
+            <div class="text-end">Total Cost: $ <span id="total">0</span></div>
+
+            <p class="pt-4 text-center">Made by ❤ S.M.Abtahi Noor</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
